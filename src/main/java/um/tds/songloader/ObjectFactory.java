@@ -7,13 +7,13 @@
 // Generado el: 2017.10.26 a las 12:42:42 AM CEST
 //
 
-package umu.tds.componente;
+package um.tds.songloader;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
 /**
  * This object contains factory methods for each Java content interface and Java element interface
- * generated in the umu.tds.componente package.
+ * generated in the um.tds.songloader package.
  *
  * <p>An ObjectFactory allows you to programatically construct new instances of the Java
  * representation for XML content. The Java representation of XML content can consist of schema
@@ -24,17 +24,17 @@ import javax.xml.bind.annotation.XmlRegistry;
 public class ObjectFactory {
   /**
    * Create a new ObjectFactory that can be used to create new instances of schema derived classes
-   * for package: umu.tds.componente
+   * for package: um.tds.songloader
    */
   public ObjectFactory() {}
 
   /** Create an instance of {@link Canciones } */
-  public Canciones createCanciones() {
-    return new Canciones();
+  public Songs createSongs() {
+    return new Songs();
   }
 
   /** Create an instance of {@link Cancion } */
-  public Cancion createCancion() {
-    return new Cancion();
+  public Song createSong() {
+    return new Song();
   }
 }

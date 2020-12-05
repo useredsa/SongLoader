@@ -7,7 +7,7 @@
 // Generado el: 2017.10.26 a las 12:42:42 AM CEST
 //
 
-package umu.tds.componente;
+package um.tds.songloader;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -16,10 +16,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Clase Java para Cancion complex type.
+ * Java class for the Song complex type.
  *
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta
- * clase.
+ * <p>The next schema fragment specifies the format expected for this class
  *
  * <pre>
  * &lt;complexType name="Cancion">
@@ -39,86 +38,89 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(
     name = "Cancion",
-    propOrder = {"url", "estilo", "interprete"})
-public class Cancion {
+    propOrder = {"url", "style", "author", "title"})
+public class Song {
   @XmlElement(name = "URL", required = true)
   protected String url;
 
-  protected String estilo;
-  protected String interprete;
+  @XmlElement(name = "estilo", required = true)
+  protected String style;
+
+  @XmlElement(name = "interprete", required = true)
+  protected String author;
 
   @XmlAttribute(name = "titulo", required = true)
-  protected String titulo;
+  protected String title;
 
   /**
-   * Obtiene el valor de la propiedad url.
+   * Gets the value of the property url.
    *
    * @return possible object is {@link String }
    */
-  public String getURL() {
+  public String getUrl() {
     return url;
   }
 
   /**
-   * Define el valor de la propiedad url.
+   * Sets the value of the property url.
    *
    * @param value allowed object is {@link String }
    */
-  public void setURL(String value) {
+  public void setUrl(String value) {
     this.url = value;
   }
 
   /**
-   * Obtiene el valor de la propiedad estilo.
+   * Gets the value of the property style.
    *
    * @return possible object is {@link String }
    */
-  public String getEstilo() {
-    return estilo;
+  public String getStyle() {
+    return style;
   }
 
   /**
-   * Define el valor de la propiedad estilo.
+   * Sets the value of the property style.
    *
    * @param value allowed object is {@link String }
    */
-  public void setEstilo(String value) {
-    this.estilo = value;
+  public void setStyle(String value) {
+    this.style = value;
   }
 
   /**
-   * Obtiene el valor de la propiedad interprete.
+   * Gets the value of the property author.
    *
    * @return possible object is {@link String }
    */
-  public String getInterprete() {
-    return interprete;
+  public String getAuthor() {
+    return author;
   }
 
   /**
-   * Define el valor de la propiedad interprete.
+   * Sets the value of the property author.
    *
    * @param value allowed object is {@link String }
    */
-  public void setInterprete(String value) {
-    this.interprete = value;
+  public void setAuthor(String value) {
+    this.author = value;
   }
 
   /**
-   * Obtiene el valor de la propiedad titulo.
+   * Gets the value of the property title.
    *
    * @return possible object is {@link String }
    */
-  public String getTitulo() {
-    return titulo;
+  public String getTitle() {
+    return title;
   }
 
   /**
-   * Define el valor de la propiedad titulo.
+   * Sets the value of the property title.
    *
    * @param value allowed object is {@link String }
    */
-  public void setTitulo(String value) {
-    this.titulo = value;
+  public void setTitle(String value) {
+    this.title = value;
   }
 }

@@ -1,24 +1,25 @@
-package umu.tds.componente;
+package um.tds.songloader;
 
 import java.io.File;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-public class MapperCancionesXMLtoJava {
-  public static Canciones cargarCanciones(String fichero) {
+public class MapperSongsXmlToJava {
+  public static Songs loadSongs(String filePath) {
     JAXBContext jc;
-    Canciones canciones = null;
+    Songs songs = null;
 
     try {
-      jc = JAXBContext.newInstance("umu.tds.componente");
+      jc = JAXBContext.newInstance("um.tds.songloader");
       Unmarshaller u = jc.createUnmarshaller();
-      File file = new File(fichero);
-      canciones = (Canciones) u.unmarshal(file);
+      File file = new File(filePath);
+      songs = (Songs) u.unmarshal(file);
     } catch (JAXBException e) {
+      // TODO
       e.printStackTrace();
     }
 
-    return canciones;
+    return songs;
   }
 }

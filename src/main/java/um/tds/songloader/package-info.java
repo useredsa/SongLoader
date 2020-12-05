@@ -10,4 +10,4 @@
 @javax.xml.bind.annotation.XmlSchema(
     namespace = "http://www.tds.es/canciones",
     elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package umu.tds.componente;
+package um.tds.songloader;

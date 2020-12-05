@@ -7,20 +7,20 @@
 // Generado el: 2017.10.26 a las 12:42:42 AM CEST
 //
 
-package umu.tds.componente;
+package um.tds.songloader;
 
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Clase Java para anonymous complex type.
+ * Java class for anonymous complex type.
  *
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta
- * clase.
+ * <p>The next schema fragment specifies the format expected for this class
  *
  * <pre>
  * &lt;complexType>
@@ -37,17 +37,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(
     name = "",
-    propOrder = {"cancion"})
+    propOrder = {"songs"})
 @XmlRootElement(name = "canciones")
-public class Canciones {
-  protected List<Cancion> cancion;
+public class Songs {
+  @XmlElement(name = "cancion", required = true)
+  protected List<Song> songs;
 
   /**
-   * Gets the value of the cancion property.
+   * Gets the value of the cacion property.
    *
    * <p>This accessor method returns a reference to the live list, not a snapshot. Therefore any
    * modification you make to the returned list will be present inside the JAXB object. This is why
-   * there is not a <CODE>set</CODE> method for the cancion property.
+   * there is not a <code>set</code> method for the cacion property.
    *
    * <p>For example, to add a new item, do as follows:
    *
@@ -55,12 +56,12 @@ public class Canciones {
    *    getCancion().add(newItem);
    * </pre>
    *
-   * <p>Objects of the following type(s) are allowed in the list {@link Cancion }
+   * <p>Objects of the following type(s) are allowed in the list {@link Song }
    */
-  public List<Cancion> getCancion() {
-    if (cancion == null) {
-      cancion = new ArrayList<Cancion>();
+  public List<Song> getSongs() {
+    if (songs == null) {
+      songs = new ArrayList<Song>();
     }
-    return this.cancion;
+    return this.songs;
   }
 }

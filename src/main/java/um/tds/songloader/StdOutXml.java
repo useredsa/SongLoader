@@ -1,18 +1,16 @@
-package umu.tds.componente;
+package um.tds.songloader;
 
-public class Programa {
+public class StdOutXml {
   public static void main(String[] args) {
-    Canciones canciones =
-        MapperCancionesXMLtoJava.cargarCanciones(
-            "xml/canciones.xml"); // Obtener fichero a cargar mediante JFileChooser en Swing
+    Songs songs = MapperSongsXmlToJava.loadSongs("xml/canciones.xml");
 
-    for (Cancion cancion : canciones.getCancion()) {
-      System.out.println("***** ***** *****");
-      System.out.println("Titulo    : " + cancion.getTitulo());
-      System.out.println("Intérprete: " + cancion.getInterprete());
-      System.out.println("Estilo    : " + cancion.getEstilo());
-      System.out.println("URL       : " + cancion.getURL());
-      System.out.println("***** ***** *****");
+    for (Song song : songs.getSongs()) {
+      System.out.println("──────────────────────────────────────────────────");
+      System.out.println("Titulo:     " + song.getTitle());
+      System.out.println("Intérprete: " + song.getAuthor());
+      System.out.println("Estilo:     " + song.getStyle());
+      System.out.println("Url:        " + song.getUrl());
+      System.out.println("──────────────────────────────────────────────────");
     }
   }
 }

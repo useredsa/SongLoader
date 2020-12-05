@@ -1,4 +1,4 @@
-# Songs Loader
+# Song Loader
 
 Component to load songs from an xml file with spanish tags.
 

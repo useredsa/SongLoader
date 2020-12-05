@@ -1,4 +1,4 @@
-package umu.tds.test;
+package um.tds.songloader.test;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -29,12 +29,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
-import umu.tds.componente.Cancion;
-import umu.tds.componente.Canciones;
-import umu.tds.componente.MapperCancionesXMLtoJava;
+import um.tds.songloader.MapperSongsXmlToJava;
+import um.tds.songloader.Song;
+import um.tds.songloader.Songs;
 
 public class TestPlay {
-
   private JFrame frmReproductorDeCanciones;
   private JTextField textURL;
   private MediaPlayer mediaPlayer;
@@ -160,14 +159,14 @@ public class TestPlay {
                 playCancion(url);
               }
             } else {
-              Canciones canciones = MapperCancionesXMLtoJava.cargarCanciones("xml/canciones.xml");
+              Songs canciones = MapperSongsXmlToJava.loadSongs("xml/canciones.xml");
 
               Random random = new Random();
-              int numCancion = random.nextInt(canciones.getCancion().size());
+              int numCancion = random.nextInt(canciones.getSongs().size());
               int posicion = 0;
-              for (Cancion cancion : canciones.getCancion()) {
+              for (Song cancion : canciones.getSongs()) {
                 if (posicion == numCancion) {
-                  playCancion(cancion.getURL());
+                  playCancion(cancion.getUrl());
                   break;
                 }
                 posicion++;

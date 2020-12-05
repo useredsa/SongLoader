@@ -123,4 +123,16 @@ public class Song {
   public void setTitle(String value) {
     this.title = value;
   }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null) return false;
+    if (getClass() != o.getClass()) return false;
+    Song other = (Song) o;
+    return url.equals(other.url)
+        && style.equals(other.style)
+        && author.equals(other.author)
+        && title.equals(other.title);
+  }
 }

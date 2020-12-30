@@ -22,7 +22,7 @@ public class SongLoader {
     // We do not compare with a previous value of file path
     // because the file may have changed in disk
     Songs songs = MapperSongsXmlToJava.loadSongs(xmlFilePath);
-    SongsLoadedEvent event = new SongsLoadedEvent(this, songs.getSongs());
+    SongsLoadedEvent event = new SongsLoadedEvent(this, songs);
     notifySongListeners(event);
   }
 

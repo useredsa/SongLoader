@@ -1,18 +1,17 @@
 package um.tds.songloader.events;
 
 import java.util.EventObject;
-import java.util.List;
-import um.tds.songloader.Song;
+import um.tds.songloader.Songs;
 
 public class SongsLoadedEvent extends EventObject {
-  private List<Song> songs;
+  private Songs songs;
 
-  public SongsLoadedEvent(Object source, List<Song> songs) {
+  public SongsLoadedEvent(Object source, Songs songs) {
     super(source);
     this.songs = songs;
   }
 
-  public List<Song> getSongs() {
+  public Songs getSongs() {
     return songs;
   }
 }

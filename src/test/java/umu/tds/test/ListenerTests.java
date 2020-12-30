@@ -11,12 +11,13 @@ import um.tds.songloader.MapperSongsXmlToJava;
 import um.tds.songloader.Song;
 import um.tds.songloader.SongLoader;
 import um.tds.songloader.SongLoaderListener;
+import um.tds.songloader.Songs;
 import um.tds.songloader.events.SongsLoadedEvent;
 
 class CatalogTests {
   private static final String xmlTestFile = "xml/canciones.xml";
 
-  private List<Song> received;
+  private Songs received;
 
   private void assertCollectionIsContained(List<Song> lhs, List<Song> rhs) {
     for (Song lsong : lhs) {
@@ -43,7 +44,7 @@ class CatalogTests {
     component.loadSongs(xmlTestFile);
 
     assertNotNull(received);
-    assertCollectionIsContained(expected, received);
-    assertCollectionIsContained(received, expected);
+    assertCollectionIsContained(expected, received.getSongs());
+    assertCollectionIsContained(received.getSongs(), expected);
   }
 }

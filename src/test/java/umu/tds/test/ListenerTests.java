@@ -12,6 +12,7 @@ import um.tds.songloader.Song;
 import um.tds.songloader.SongLoader;
 import um.tds.songloader.SongLoaderListener;
 import um.tds.songloader.Songs;
+import um.tds.songloader.TdsSongLoader;
 import um.tds.songloader.events.SongsLoadedEvent;
 
 class CatalogTests {
@@ -29,7 +30,7 @@ class CatalogTests {
 
   @Test
   void listenerGetsNotified() {
-    SongLoader component = new SongLoader();
+    SongLoader component = new TdsSongLoader();
     SongLoaderListener listener =
         new SongLoaderListener() {
           public void notifySongsLoaded(SongsLoadedEvent event) {
